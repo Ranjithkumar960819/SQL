@@ -1,3 +1,101 @@
+A.	Retail Banking Case Study
+The retail banking business model maintains records of Branch, Employees, Customers and Accounts as follows
+Description of Tables 
+Branch – 
+Branch_no A system generated number 
+Name – Branch Location 
+Employees – 
+Emp_no – A system generated number
+Branch_no – A unique branch id (it must be present in Branch table)
+Fname, Mname, Lname – First, middle and last name of employee
+Dept – Employee’s department
+Desig – Designation of employee
+Mngr_no – Manager Id( must be present in employee table)
+ Customers – 
+Cust_no – System Generated no
+Fname, Mname, Lname - First, middle and last name of customer
+City – city of customer
+DoB_- Date of birth of customer
+Occup – Occupation of customer
+Accounts – 
+Acc_no – A system generated no
+Branch_no – A unique branch id (it must be present in Branch table)
+Cust_no – customer no (must be present in customers table)
+Type – type of account (CA (current) ,  SA (saving))
+OpnDT – account open date
+CurBal – Current balance
+Status – status of account (active, suspended, Terminated)
+
+	
+Entity Relationship Diagram for Bank Retail case study
+ 
+Questions
+1.	Create DataBase BANK and Write SQL query to create above schema with constraints
+2.	Inserting Records into created tables
+Branch
+Branch_no	Name
+1		Delhi
+2		Mumbai
+Customer
+custid	fname	mname	lname	occupation	dob
+1	Ramesh	Chandra	Sharma	Service		1976-12-06
+2	Avinash	Sunder	Minha	Business		1974-10-16
+
+Account
+acnumber	custid	bid	curbal	opnDT	atype	astatus
+1	1	1	10000	2012-12-15	Saving	Active
+2	2	2	5000	2012-06-12	Saving	Active
+Employee
+Emp_no	Branch_no	Fname	Mname	Lname	Dept	Desig		Mngr_no
+1	1		Mark	steve	Lara	Account	Accountant	2
+2	2		Bella	James	Ronald	Loan	Manager		1
+
+
+3.	Select unique occupation from customer table
+
+4.	Sort accounts according to current balance 
+
+5.	Find the Date of Birth of customer name ‘Ramesh’
+
+6.	Add column city to branch table 
+
+7.	Update the mname and lname of employee ‘Bella’ and set to ‘Karan’, ‘Singh’ 
+
+8.	Select accounts opened between '2012-07-01' AND '2013-01-01'
+
+9.	List the names of customers having ‘a’ as the second letter in their names 
+
+
+10.	Find the lowest balance from customer and account table
+
+
+11.	Give the count of customer for each occupation
+
+12.	Write a query to find the name (first_name, last_name) of the employees who are managers.
+
+13.	List name of all employees whose name ends with a
+
+14.	Select the details of the employee who work either for department ‘loan’ or ‘credit’
+15.	Write a query to display the customer number, customer firstname, account number for the 
+16.	Write a query to display the customer’s number, customer’s firstname, branch id and balance amount for people using JOIN.
+17.	Create a virtual table to store the customers who are having the accounts in the same city as they live
+18.	A. Create a transaction table with following details 
+TID – transaction ID – Primary key with autoincrement 
+Custid – customer id (reference from customer table
+account no – acoount number (references account table)
+bid – Branch id – references branch table
+amount – amount in numbers
+type – type of transaction (Withdraw or deposit)
+DOT -  date of transaction
+
+a. Write trigger to update balance in account table on Deposit or Withdraw in transaction table
+b. Insert values in transaction table to show trigger success
+
+19.	Write a query to display the details of customer with second highest balance 
+
+20.	Take backup of the databse created in this case study
+
+
 
 # 1.Create DataBase BANK and Write SQL query to create above schema with constraints
 
